@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Lightbulb, ArrowUpRight, CheckCircle2, Target, Compass, ShieldCheck, Users, Layers, ExternalLink } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Target, Compass, ShieldCheck, Users, Layers, ExternalLink } from 'lucide-react';
 import { REPLIT_PROJECTS, ReplitProject } from '../data/replitData';
 
 interface ReplitHomeBlocksProps {
@@ -74,16 +74,13 @@ export const ReplitSequence: React.FC = () => {
           {steps.map((step, idx) => (
             <div
               key={step.num}
-              className={`p-6 sm:p-8 flex flex-col justify-between ${
+              className={`sequence-card group p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                 idx < 3 ? 'lg:border-r border-[#D0E7F5]' : ''
               } ${idx % 2 === 0 ? 'md:border-r lg:border-r-0' : ''} border-b md:border-b-0 border-[#D0E7F5]`}
             >
               <div>
                 <div className="flex items-center justify-between mb-8">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#415D7E] font-mono">
-                    The Sequence
-                  </span>
-                  <span className="w-8 h-8 rounded-full bg-[#EAF6FC] text-[#159FE3] font-bold text-xs flex items-center justify-center">
+                  <span className="sequence-number w-8 h-8 rounded-full bg-[#EAF6FC] text-[#159FE3] font-bold text-xs flex items-center justify-center transition-all duration-300">
                     {step.num}
                   </span>
                 </div>
@@ -177,14 +174,6 @@ export const ReplitHomeProjectsPreview: React.FC<ReplitHomeBlocksProps> = ({
             <span>Browse the repository</span>
             <ArrowRight className="w-3.5 h-3.5 text-[#159FE3] group-hover:translate-x-0.5 transition-transform" />
           </button>
-        </div>
-
-        {/* Verified Ecosystem Banner */}
-        <div className="bg-[#EAF6FC] border border-[#D0E7F5] rounded-2xl p-4 sm:p-5 flex items-start gap-3 mb-8">
-          <CheckCircle2 className="w-4 h-4 text-[#159FE3] shrink-0 mt-0.5" />
-          <div className="text-xs text-[#102B4E] leading-relaxed">
-            <strong>Verified project archive.</strong> Real student engineering solutions, cross-border COIL coursework, and field pilots co-created with partner universities and communities across South Africa, Uganda, Kenya, Austria, and Germany.
-          </div>
         </div>
 
         {/* 4 Featured Real Project Cards */}

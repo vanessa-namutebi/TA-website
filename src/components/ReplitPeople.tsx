@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 import {
   Users,
-  GraduationCap,
-  Building2,
-  Rocket,
-  HeartHandshake,
-  Award,
   CheckCircle2,
   ArrowRight,
-  BookOpen,
   Briefcase,
   Layers,
-  Sparkles,
   ExternalLink
 } from 'lucide-react';
 
@@ -43,14 +36,14 @@ export const ReplitPeople: React.FC<ReplitPeopleProps> = ({
     }
   }, [initialSubTab]);
 
-  const subTabs: { id: PeopleSubTab; label: string; icon: React.ReactNode }[] = [
-    { id: 'students', label: 'Students / Associates', icon: <GraduationCap className="w-3.5 h-3.5" /> },
-    { id: 'universities', label: 'Higher Education Systems', icon: <BookOpen className="w-3.5 h-3.5" /> },
-    { id: 'industry', label: 'Industry & Businesses', icon: <Building2 className="w-3.5 h-3.5" /> },
-    { id: 'hubs', label: 'Start-Up & Impact Hubs', icon: <Rocket className="w-3.5 h-3.5" /> },
-    { id: 'ngos', label: 'Non-Profit Organisations', icon: <HeartHandshake className="w-3.5 h-3.5" /> },
-    { id: 'outcomes', label: 'Learning Outcomes', icon: <Award className="w-3.5 h-3.5" /> },
-    { id: 'training', label: 'Training & Development', icon: <Sparkles className="w-3.5 h-3.5" /> }
+  const subTabs: { id: PeopleSubTab; label: string }[] = [
+    { id: 'students', label: 'Students / Associates' },
+    { id: 'universities', label: 'Higher Education Systems' },
+    { id: 'industry', label: 'Industry & Businesses' },
+    { id: 'hubs', label: 'Start-Up & Impact Hubs' },
+    { id: 'ngos', label: 'Non-Profit Organisations' },
+    { id: 'outcomes', label: 'Learning Outcomes' },
+    { id: 'training', label: 'Training & Development' }
   ];
 
   return (
@@ -112,7 +105,6 @@ export const ReplitPeople: React.FC<ReplitPeopleProps> = ({
                   : 'bg-white/80 text-[#102B4E]/75 hover:bg-white hover:text-[#102B4E] border border-[#D0E7F5]/60'
               }`}
             >
-              {tab.icon}
               <span>{tab.label}</span>
             </button>
           ))}

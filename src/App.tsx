@@ -161,7 +161,10 @@ export default function App() {
       } else if (parts[0] === 'portal' || parts[0] === 'contact' || parts[0] === 'login') {
         setCurrentTab('portal');
         setSelectedProject(null);
-        if (parts[1]) setPortalSubTab(parts[1] as PortalTab);
+        if (parts[1]) {
+          const tab = parts[1] as PortalTab;
+          setPortalSubTab(tab === 'registration' ? 'registration' : 'intake');
+        }
       } else if (parts[0] === 'home' || !parts[0]) {
         setCurrentTab('home');
         setSelectedProject(null);
@@ -186,7 +189,7 @@ export default function App() {
     } else if (tab === 'partnership' && subTab) {
       setPartnershipSubTab(subTab as PartnershipSubTab);
     } else if (tab === 'portal' && subTab) {
-      setPortalSubTab(subTab as PortalTab);
+      setPortalSubTab(subTab === 'registration' ? 'registration' : 'intake');
     }
 
     window.location.hash = subTab ? `#/${tab}/${subTab}` : `#/${tab}`;
@@ -206,6 +209,31 @@ export default function App() {
     window.location.hash = '#/projects/overview';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    if (currentTab !== 'home') return;
+
+    const sections = Array.from(document.querySelectorAll<HTMLElement>('main section'));
+    sections.forEach((section, index) => {
+      section.classList.add('home-scroll-reveal');
+      section.style.setProperty('--reveal-delay', `${Math.min(index, 4) * 70}ms`);
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [currentTab]);
 
   const pendingProposalsCount = proposals.filter((p) => p.status === 'Pending Review').length;
 
@@ -278,7 +306,7 @@ export default function App() {
             {currentTab === 'partnership' && (
               <ReplitPartnership
                 initialSubTab={partnershipSubTab}
-                onNavigateToContact={() => handleNavigate('portal', 'office')}
+                onNavigateToContact={() => handleNavigate('portal', 'intake')}
                 onNavigateToProjects={() => handleNavigate('projects', 'overview')}
               />
             )}

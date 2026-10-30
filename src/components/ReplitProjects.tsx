@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import {
-  FolderKanban,
   Sparkles,
-  BookOpen,
-  Layers,
   ArrowRight,
   ExternalLink,
   GraduationCap,
@@ -53,16 +50,15 @@ export const ReplitProjects: React.FC<ReplitProjectsProps> = ({
     }
   }, [initialSubTab]);
 
-  const subTabs: { id: ProjectsSubTab; label: string; icon: React.ReactNode; badge?: string }[] = [
-    { id: 'approach', label: 'General Approach', icon: <Layers className="w-3.5 h-3.5" /> },
-    { id: 'types', label: 'Types', icon: <BookOpen className="w-3.5 h-3.5" /> },
+  const subTabs: { id: ProjectsSubTab; label: string; badge?: string }[] = [
+    { id: 'approach', label: 'General Approach' },
+    { id: 'types', label: 'Types' },
     {
       id: 'pipeline',
       label: 'Project pipeline',
-      icon: <Sparkles className="w-3.5 h-3.5" />,
       badge: `${opportunities.filter(o => o.status === 'Open for Applications').length} Active`
     },
-    { id: 'overview', label: 'Overview', icon: <FolderKanban className="w-3.5 h-3.5" /> }
+    { id: 'overview', label: 'Overview' }
   ];
 
   return (
@@ -87,9 +83,6 @@ export const ReplitProjects: React.FC<ReplitProjectsProps> = ({
                       : 'text-[#415D7E] hover:text-[#102B4E] hover:bg-[#EAF6FC]'
                   }`}
                 >
-                  <span className={activeTab === tab.id ? 'text-[#159FE3]' : 'text-slate-400'}>
-                    {tab.icon}
-                  </span>
                   <span>{tab.label}</span>
                   {tab.badge && (
                     <span

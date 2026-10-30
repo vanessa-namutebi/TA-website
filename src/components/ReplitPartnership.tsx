@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import {
   Handshake,
-  Landmark,
-  Coins,
-  Calendar,
   Mail,
   Phone,
   MapPin,
@@ -37,12 +34,12 @@ export const ReplitPartnership: React.FC<ReplitPartnershipProps> = ({
     }
   }, [initialSubTab]);
 
-  const subTabs: { id: PartnershipSubTab; label: string; icon: React.ReactNode }[] = [
-    { id: 'membership', label: 'Institutional Membership', icon: <Landmark className="w-3.5 h-3.5" /> },
-    { id: 'sponsorship', label: 'Sponsorship & Grants', icon: <Coins className="w-3.5 h-3.5" /> },
-    { id: 'events', label: 'Events & Conferences', icon: <Calendar className="w-3.5 h-3.5" /> },
-    { id: 'financials', label: 'Financial Framework', icon: <ShieldCheck className="w-3.5 h-3.5" /> },
-    { id: 'contact', label: 'Consortium Contacts', icon: <Mail className="w-3.5 h-3.5" /> }
+  const subTabs: { id: PartnershipSubTab; label: string }[] = [
+    { id: 'membership', label: 'Institutional Membership' },
+    { id: 'sponsorship', label: 'Sponsorship & Grants' },
+    { id: 'events', label: 'Events & Conferences' },
+    { id: 'financials', label: 'Financial Framework' },
+    { id: 'contact', label: 'Consortium Contacts' }
   ];
 
   return (
@@ -93,7 +90,6 @@ export const ReplitPartnership: React.FC<ReplitPartnershipProps> = ({
                   : 'bg-white/80 text-[#102B4E]/75 hover:bg-white hover:text-[#102B4E] border border-[#D0E7F5]/60'
               }`}
             >
-              {tab.icon}
               <span>{tab.label}</span>
             </button>
           ))}

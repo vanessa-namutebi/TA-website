@@ -16,7 +16,7 @@ export const ReplitFooter: React.FC<ReplitFooterProps> = ({ onNavigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Grid */}
-        <div className="flex flex-col md:flex-row items-start justify-between gap-10 pb-12 border-b border-white/10">
+        <div className="relative flex flex-col md:flex-row items-start justify-between gap-10 pb-12 border-b border-white/10">
           
           {/* Brand & Copy */}
           <div className="max-w-md space-y-3">
@@ -41,19 +41,10 @@ export const ReplitFooter: React.FC<ReplitFooterProps> = ({ onNavigate }) => {
             <p className="text-xs text-slate-300 leading-relaxed pt-2">
               Building lasting bridges between Africa and Europe through project-based collaboration, shared learning, and measurable socio-economic impact.
             </p>
-            <div className="text-[11px] text-slate-400 font-mono pt-1">
-              Austrian Non-Profit Association · Head of Studies: Prof. Dr.-Ing. Gerhard Hillmer MSc
-            </div>
           </div>
 
           {/* Navigation Links matching Google Site Pillars */}
-          <nav className="flex flex-wrap items-center gap-6 sm:gap-8 text-xs font-semibold text-slate-300" aria-label="Footer navigation">
-            <button
-              onClick={() => handleNav('home')}
-              className="hover:text-[#159FE3] transition-colors"
-            >
-              Home
-            </button>
+          <nav className="grid grid-cols-2 gap-x-8 gap-y-4 text-center text-xs font-semibold text-slate-300 md:absolute md:left-1/2 md:-translate-x-1/2 md:top-0" aria-label="Footer navigation">
             <button
               onClick={() => handleNav('purpose')}
               className="hover:text-[#159FE3] transition-colors"
@@ -88,13 +79,19 @@ export const ReplitFooter: React.FC<ReplitFooterProps> = ({ onNavigate }) => {
 
         </div>
 
-        {/* Bottom Legal / Metadata Row */}
-        <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-slate-400 font-mono">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#FFC94A]"></span>
-            <span>Transformation Africa · Austrian Association HQ: Maximilianstraße 2, 6020 Innsbruck</span>
+        {/* Bottom Legal Row */}
+        <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-slate-400">
+          <span>© 2025 Transformation Africa. All rights reserved.</span>
+          <div className="flex flex-wrap items-center gap-4">
+            <span>Privacy Policy</span>
+            <span>Terms of Service</span>
+            <button
+              onClick={() => handleNav('portal')}
+              className="hover:text-[#159FE3] transition-colors"
+            >
+              Contact Us
+            </button>
           </div>
-          <div>Academic Consortium: Makerere · Stellenbosch · MCI Innsbruck · TU Munich</div>
         </div>
 
       </div>

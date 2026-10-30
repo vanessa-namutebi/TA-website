@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import {
   Compass,
-  Target,
   Sparkles,
-  Globe2,
-  Users,
   ShieldCheck,
   CheckCircle2,
   ArrowRight,
-  TrendingUp,
-  Award,
-  Layers,
   BookOpen,
   Mail,
   Phone,
@@ -50,15 +44,15 @@ export const ReplitPurpose: React.FC<ReplitPurposeProps> = ({
     }
   }, [initialSubTab]);
 
-  const subTabs: { id: PurposeSubTab; label: string; icon: React.ReactNode }[] = [
-    { id: 'background', label: 'Background / Scope', icon: <Globe2 className="w-3.5 h-3.5" /> },
-    { id: 'mission', label: 'Mission', icon: <Target className="w-3.5 h-3.5" /> },
-    { id: 'ecosystem', label: 'EcoSystem Approach', icon: <Layers className="w-3.5 h-3.5" /> },
-    { id: 'sdgs', label: 'UN SDGs / Africa Agenda 2063', icon: <TrendingUp className="w-3.5 h-3.5" /> },
-    { id: 'competences', label: 'Key Competences Model', icon: <Award className="w-3.5 h-3.5" /> },
-    { id: 'testimonials', label: 'Testimonials', icon: <Sparkles className="w-3.5 h-3.5" /> },
-    { id: 'team', label: 'Core Team', icon: <Users className="w-3.5 h-3.5" /> },
-    { id: 'contact', label: 'Contact', icon: <Mail className="w-3.5 h-3.5" /> }
+  const subTabs: { id: PurposeSubTab; label: string }[] = [
+    { id: 'background', label: 'Background / Scope' },
+    { id: 'mission', label: 'Mission' },
+    { id: 'ecosystem', label: 'EcoSystem Approach' },
+    { id: 'sdgs', label: 'UN SDGs / Africa Agenda 2063' },
+    { id: 'competences', label: 'Key Competences Model' },
+    { id: 'testimonials', label: 'Testimonials' },
+    { id: 'team', label: 'Core Team' },
+    { id: 'contact', label: 'Contact' }
   ];
 
   return (
@@ -73,34 +67,16 @@ export const ReplitPurpose: React.FC<ReplitPurposeProps> = ({
         </div>
 
         {/* Hero Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-10">
-          <div className="lg:col-span-8">
+        <div className="mb-10">
+          <div className="max-w-4xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#102B4E] tracking-tight leading-tight mb-4">
               Building Bridges between Africa &amp; Europe.
             </h1>
             <p className="text-lg sm:text-xl text-[#102B4E]/80 font-medium leading-relaxed max-w-2xl mb-4">
               Through project-based collaboration, we organize trusted relationships around real opportunities, complementary capabilities, and shared responsibilities.
             </p>
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-[#EAF6FC] border border-[#D0E7F5] text-xs font-medium text-[#102B4E]">
-              <span className="w-2 h-2 rounded-full bg-[#159FE3] animate-pulse" />
-              <span>Aligned with UN Agenda 2030 (SDGs) &amp; African Union Agenda 2063</span>
-            </div>
           </div>
 
-          {/* Mandela Quote Card */}
-          <div className="lg:col-span-4 bg-[#102B4E] text-white p-6 sm:p-7 rounded-3xl shadow-md relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#159FE3]/15 rounded-full blur-2xl pointer-events-none" />
-            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#FFC94A] font-bold mb-3 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Guiding Philosophy</span>
-            </div>
-            <blockquote className="text-base sm:text-lg font-serif italic text-white leading-snug mb-3">
-              &ldquo;Education is the most powerful tool which you can use to change a society.&rdquo;
-            </blockquote>
-            <div className="text-xs font-bold text-[#FFC94A] tracking-wider uppercase font-mono">
-              — Nelson Mandela
-            </div>
-          </div>
         </div>
 
         {/* Sub-tab Pill Navigation */}
@@ -115,7 +91,6 @@ export const ReplitPurpose: React.FC<ReplitPurposeProps> = ({
                   : 'bg-white/80 text-[#102B4E]/75 hover:bg-white hover:text-[#102B4E] border border-[#D0E7F5]/60'
               }`}
             >
-              {tab.icon}
               <span>{tab.label}</span>
             </button>
           ))}

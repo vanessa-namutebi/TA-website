@@ -44,12 +44,12 @@ export const ReplitPortal: React.FC<ReplitPortalProps> = ({
   onNavigateToOpportunities,
   initialTab = 'intake'
 }) => {
-  const [activeTab, setActiveTab] = useState<PortalTab>(initialTab);
+  const [activeTab, setActiveTab] = useState<PortalTab>(
+    initialTab === 'registration' ? 'registration' : 'intake'
+  );
 
   React.useEffect(() => {
-    if (initialTab) {
-      setActiveTab(initialTab);
-    }
+    setActiveTab(initialTab === 'registration' ? 'registration' : 'intake');
   }, [initialTab]);
 
   const [adminStatusFilter, setAdminStatusFilter] = useState<'All' | 'Pending Review' | 'Approved' | 'Declined'>('All');
@@ -192,27 +192,12 @@ export const ReplitPortal: React.FC<ReplitPortalProps> = ({
 
         {/* Hero Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-10">
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-12">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#102B4E] tracking-tight leading-tight mb-4">
               Personal Portal &amp; Challenge Intake
             </h1>
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
               When an organisation faces a technical, business, or community bottleneck, they reach out here. Our Academic Consortium Board reviews the challenge, verifies curricular alignment, and approves it to live status.
-            </p>
-          </div>
-
-          <div className="lg:col-span-4 bg-[#EAF6FC] border border-[#D0E7F5] rounded-3xl p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-2xl bg-[#102B4E] text-[#FFC94A] flex items-center justify-center font-bold">
-                <ShieldCheck className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold text-[#102B4E]">Austrian Association HQ</h4>
-                <div className="text-[11px] text-slate-600">ZVR: Non-Profit Association</div>
-              </div>
-            </div>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Supervised under the stewardship of Prof. Dr.-Ing. Gerhard Hillmer, Head of Studies at MCI Innsbruck.
             </p>
           </div>
         </div>
@@ -232,23 +217,6 @@ export const ReplitPortal: React.FC<ReplitPortalProps> = ({
           </button>
 
           <button
-            onClick={() => setActiveTab('admin')}
-            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all ${
-              activeTab === 'admin'
-                ? 'bg-[#102B4E] text-white shadow-xs'
-                : 'text-[#415D7E] hover:text-[#102B4E] hover:bg-[#EAF6FC]'
-            }`}
-          >
-            <ShieldCheck className="w-4 h-4 text-[#FFC94A]" />
-            <span>Admin Review Board</span>
-            {pendingCount > 0 && (
-              <span className="w-5 h-5 rounded-full bg-[#FFC94A] text-[#102B4E] text-[10px] font-black flex items-center justify-center font-mono">
-                {pendingCount}
-              </span>
-            )}
-          </button>
-
-          <button
             onClick={() => setActiveTab('registration')}
             className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all ${
               activeTab === 'registration'
@@ -260,29 +228,6 @@ export const ReplitPortal: React.FC<ReplitPortalProps> = ({
             <span>Student &amp; Associate Registration</span>
           </button>
 
-          <button
-            onClick={() => setActiveTab('signin')}
-            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all ${
-              activeTab === 'signin'
-                ? 'bg-[#102B4E] text-white shadow-xs'
-                : 'text-[#415D7E] hover:text-[#102B4E] hover:bg-[#EAF6FC]'
-            }`}
-          >
-            <Lock className="w-4 h-4 text-[#159FE3]" />
-            <span>Member Sign-in &amp; SSO</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab('office')}
-            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all ${
-              activeTab === 'office'
-                ? 'bg-[#102B4E] text-white shadow-xs'
-                : 'text-[#415D7E] hover:text-[#102B4E] hover:bg-[#EAF6FC]'
-            }`}
-          >
-            <Mail className="w-4 h-4 text-[#159FE3]" />
-            <span>Consortium Offices</span>
-          </button>
         </div>
 
         {/* Tab 1: Challenge Intake Form */}
@@ -302,18 +247,7 @@ export const ReplitPortal: React.FC<ReplitPortalProps> = ({
                   <p className="text-xs font-mono font-bold text-[#159FE3] mb-4">
                     Reference ID: {submittedRefId}
                   </p>
-                  <p className="text-sm text-slate-600 leading-relaxed mb-8">
-                    Your challenge has been queued for review by the Transformation Africa Academic Consortium Board (MCI Innsbruck, Makerere University, Stellenbosch University, and TU Munich). You can test-drive the admin review process right now in the <strong>Admin Review Board</strong> tab.
-                  </p>
-
                   <div className="flex flex-wrap items-center justify-center gap-4">
-                    <button
-                      onClick={() => setActiveTab('admin')}
-                      className="px-6 py-2.5 rounded-full bg-[#102B4E] hover:bg-[#0C223E] text-white text-xs font-bold flex items-center gap-2 shadow-xs transition-all"
-                    >
-                      <ShieldCheck className="w-4 h-4 text-[#FFC94A]" />
-                      <span>Switch to Admin Board to Review</span>
-                    </button>
                     <button
                       onClick={handleResetForm}
                       className="px-6 py-2.5 rounded-full bg-white hover:bg-[#EAF6FC] text-[#102B4E] text-xs font-bold border border-[#D0E7F5] transition-all"

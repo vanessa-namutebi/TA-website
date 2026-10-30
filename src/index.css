@@ -14,3 +14,133 @@
     letter-spacing: -0.025em;
   }
 }
+
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes heroSunPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+.hero-collaborators {
+  animation: heroFloat 5s ease-in-out infinite;
+}
+
+.hero-sun {
+  animation: heroSunPulse 4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hero-organic-background {
+  clip-path: none;
+  border-radius: 48px;
+}
+
+.hero-copy,
+.hero-visual {
+  transition: transform 120ms linear;
+  will-change: transform;
+}
+
+.hero-card-one {
+  animation: heroCardFloatOne 5.5s ease-in-out infinite;
+}
+
+.hero-card-two {
+  animation: heroCardFloatTwo 6s ease-in-out infinite;
+}
+
+.hero-card-three {
+  animation: heroCardFloatOne 4.8s ease-in-out infinite reverse;
+}
+
+@keyframes heroCardFloatOne {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -7px, 0);
+  }
+}
+
+@keyframes heroCardFloatTwo {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+.hero-section {
+  background:
+    radial-gradient(circle at 78% 28%, rgba(21, 159, 227, 0.055), transparent 22rem),
+    radial-gradient(circle at 12% 78%, rgba(255, 201, 74, 0.05), transparent 18rem);
+}
+
+.home-scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 700ms ease var(--reveal-delay, 0ms),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+}
+
+.home-scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sequence-card:hover {
+  background: #FFFFFF;
+  box-shadow: 0 18px 45px rgba(16, 43, 78, 0.08);
+  transform: translateY(-6px);
+  z-index: 1;
+}
+
+.sequence-card:hover h3 {
+  color: #159FE3;
+}
+
+.sequence-card:hover .sequence-number {
+  background: #102B4E;
+  color: #FFFFFF;
+  transform: scale(1.08) rotate(3deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-collaborators,
+  .hero-sun,
+  .hero-card-one,
+  .hero-card-two,
+  .hero-card-three {
+    animation: none;
+  }
+
+  .hero-copy,
+  .hero-visual {
+    transform: none !important;
+    transition: none;
+  }
+
+  .home-scroll-reveal,
+  .home-scroll-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
