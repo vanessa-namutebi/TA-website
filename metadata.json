@@ -1,0 +1,6 @@
+{
+  "name": "Transformation Africa (PaaC)",
+  "description": "Platform-as-a-Community connecting students, universities, businesses, and communities across Africa and Europe through collaborative project-based learning and an open project repository.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
