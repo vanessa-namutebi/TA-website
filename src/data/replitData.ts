@@ -1,3 +1,11 @@
+import agritechImage from '../assets/images/agritech_smart_sensor_1792567153759.jpg';
+import droneImage from '../assets/images/drone_health_logistics_1792567154496.jpg';
+import circularEnergyImage from '../assets/images/circular_clean_energy_1792567155140.jpg';
+import digitalKioskImage from '../assets/images/digital_community_kiosk_1792569747527.jpg';
+import cleanWaterImage from '../assets/images/clean_water_solar_1792569761798.jpg';
+import foodHarvestImage from '../assets/images/food_value_harvest_1792569777069.jpg';
+import heroImage from '../assets/images/hero_collaboration_lab_1792567152591.jpg';
+
 export interface ProjectTeamMember {
   name: string;
   role: string;
@@ -79,7 +87,7 @@ export const REPLIT_PROJECTS: ReplitProject[] = [
     projectType: 'Cross-border collaboration',
     recordStatus: 'Verified Case Study',
     isDemo: false,
-    image: '/src/assets/images/agritech_smart_sensor_1792567153759.jpg',
+    image: agritechImage,
     question: 'How might emerging smallholder farmers monitor subsurface soil moisture without prohibitive commercial sensor subscription costs?',
     narrative: 'A collaborative project between mechatronics engineers at Stellenbosch University and environmental technology students at MCI Innsbruck. The team designed and field-tested an open-hardware, solar-rechargeable LoRaWAN soil moisture node costing under $35, compared to $4,000 commercial baselines.',
     illustrativeOutcome: 'Continuous 120-day automated soil telemetry deployed across 14 smallholder farms in the Western Cape, yielding a measured 38% reduction in irrigation water waste and 19% yield increase.',
@@ -120,7 +128,7 @@ export const REPLIT_PROJECTS: ReplitProject[] = [
     projectType: 'Academic & community partnership',
     recordStatus: 'Verified Case Study',
     isDemo: false,
-    image: '/src/assets/images/drone_health_logistics_1792567154496.jpg',
+    image: droneImage,
     question: 'How can emergency blood supplies and rabies anti-venom reach impassable flooded clinics in under 45 minutes?',
     narrative: 'A medical-engineering team between Makerere University in Kampala and Technical University of Munich designed an autonomous fixed-wing VTOL drone with an insulated thermoelectric compartment maintaining 2°C–8°C over an 85 km transit radius.',
     illustrativeOutcome: 'Flight trials across Jinja and Kamuli districts cutting emergency transit from 4.5 hours overland by motorcycle to 38 minutes aerial dispatch, keeping cold-chain integrity 100% stable across 24 missions.',
@@ -161,7 +169,7 @@ export const REPLIT_PROJECTS: ReplitProject[] = [
     projectType: 'Student-led innovation',
     recordStatus: 'Verified Case Study',
     isDemo: false,
-    image: '/src/assets/images/circular_clean_energy_1792567155140.jpg',
+    image: circularEnergyImage,
     question: 'How can smallholder farming crop residues replace single-use plastic wrap while generating supplementary rural income?',
     narrative: 'Interdisciplinary teams from Makerere Industrial Chemistry and MCI Innsbruck created an organic cellulose extraction protocol that presses post-harvest agricultural waste into food-grade, biodegradable trays that decompose in 28 days, pressing byproduct fiber into clean cooking fuel.',
     illustrativeOutcome: 'Eliminated 3.2 tons of single-use plastic in local market trials, generated 22% additional income for 65 rural women farmers, and reduced indoor smoke emissions by 84%.',
@@ -202,7 +210,7 @@ export const REPLIT_PROJECTS: ReplitProject[] = [
     projectType: 'Cross-border collaboration',
     recordStatus: 'Verified Case Study',
     isDemo: false,
-    image: '/src/assets/images/digital_community_kiosk_1792569747527.jpg',
+    image: digitalKioskImage,
     question: 'How can essential civic and healthcare information be structured for community members with intermittent connectivity and low digital literacy?',
     narrative: 'Joint engineering between Makerere University students and technical researchers at TU Munich designing audio-first USSD/SMS fallback portals and lightweight progressive web apps for remote maternal clinics and municipal registration in Kampala.',
     illustrativeOutcome: 'Piloted across 6 community health kiosks serving 1,840+ residents, cutting queue times by 70% with 42 KB initial load sizes that work flawlessly on 2G edge cellular connections.',
@@ -243,7 +251,7 @@ export const REPLIT_PROJECTS: ReplitProject[] = [
     projectType: 'Academic & community partnership',
     recordStatus: 'Verified Case Study',
     isDemo: false,
-    image: '/src/assets/images/clean_water_solar_1792569761798.jpg',
+    image: cleanWaterImage,
     question: 'How can saline, contaminated borehole water be distilled cleanly using only sunlight and local repairable parts?',
     narrative: 'Thermodynamics students from MCI Innsbruck and fabrication researchers from Makerere University engineered a multi-stage solar basin distiller combined with a 25W UV-C disinfection chamber, built completely with local sheet metal and standard glass.',
     illustrativeOutcome: 'Generates 240 liters of purified drinking water daily for Moroto Model Primary School supporting 180 pupils, eliminating 99.99% of bacterial pathogens with operating costs under $8 per year.',
@@ -284,7 +292,7 @@ export const REPLIT_PROJECTS: ReplitProject[] = [
     projectType: 'Student-led innovation',
     recordStatus: 'Verified Case Study',
     isDemo: false,
-    image: '/src/assets/images/food_value_harvest_1792569777069.jpg',
+    image: foodHarvestImage,
     question: 'How can smallholder specialty coffee farmers capture transparent export pricing and eliminate predatory middlemen?',
     narrative: 'Students in agricultural economics from Makerere University, WU Vienna, and University of Cape Town built an open lot tracking platform featuring optical sorting standards, batch QR origin seals, and direct buyer contracts with European roasters.',
     illustrativeOutcome: 'Equipped 320 smallholder coffee producers on Mount Elgon, delivering a validated 31% farmgate price premium and enabling the export of 18 metric tons of specialty beans directly to roasters in Innsbruck and Vienna.',
@@ -325,7 +333,7 @@ export const REPLIT_PROJECTS: ReplitProject[] = [
     projectType: 'Cross-border collaboration',
     recordStatus: 'Verified Case Study',
     isDemo: false,
-    image: '/src/assets/images/hero_collaboration_lab_1792567152591.jpg',
+    image: heroImage,
     question: 'How can electric motorcycle taxi riders eliminate 4-hour charge downtimes with off-grid solar infrastructure?',
     narrative: 'Students from the University of Nairobi, Stellenbosch University, and MCI Innsbruck designed a 12-bay solar canopy swap station with automated M-Pesa mobile money integration. Drivers swap battery packs in under 80 seconds without grid dependence.',
     illustrativeOutcome: '2,400 successful battery exchanges logged across 35 enrolled riders, reducing rider daily operational fuel expenditures by $3.80/day and offsetting 46 tons of CO2.',
@@ -364,7 +372,7 @@ export const REPLIT_PROJECTS: ReplitProject[] = [
     projectType: 'Venture exploration',
     recordStatus: 'Verified Case Study',
     isDemo: false,
-    image: '/src/assets/images/agritech_smart_sensor_1792567153759.jpg',
+    image: agritechImage,
     question: 'How can smallholders access affordable drought protection without expensive in-person loss adjusters?',
     narrative: 'Students in agricultural economics at Stellenbosch and finance engineering at TU Munich built an open-source parametric smart insurance model based on Sentinel-2 and ERA5 satellite precipitation data.',
     illustrativeOutcome: 'Protected 420 smallholder farmers across 4 co-ops; when a 24-day dry spell occurred in late 2024, algorithmic payouts of $18,400 arrived in 4 hours directly to farmers mobile wallets.',
@@ -400,7 +408,7 @@ export const REPLIT_PROJECTS: ReplitProject[] = [
     projectType: 'Student-led innovation',
     recordStatus: 'Verified Case Study',
     isDemo: false,
-    image: '/src/assets/images/hero_collaboration_lab_1792567152591.jpg',
+    image: heroImage,
     question: 'How can township waste plastic be repurposed locally into durable science laboratory equipment for schools?',
     narrative: 'Students in mechanical engineering at Stellenbosch and TU Munich designed an open-source plastic shredding, washing, and filament extrusion workbench that converts post-consumer plastic into high-precision 3D printer filament, producing hands-on gear, pulley, and optics teaching kits.',
     illustrativeOutcome: 'Diverted 850kg of PET plastic bottles from landfills, fabricated 45 modular physics kits equipping 6 township schools, and trained 18 youth apprentices in recycling machinery operation.',
@@ -441,7 +449,7 @@ export const REPLIT_PROJECTS: ReplitProject[] = [
     projectType: 'Academic & community partnership',
     recordStatus: 'Verified Case Study',
     isDemo: false,
-    image: '/src/assets/images/digital_community_kiosk_1792569747527.jpg',
+    image: digitalKioskImage,
     question: 'How can university climate research be translated rapidly into municipal urban drainage and heat adaptation action?',
     narrative: 'Across 8 synchronized Collaborative Online International Learning (COIL) classrooms, 140 students from Makerere, Stellenbosch, and MCI Innsbruck conducted joint spatial vulnerability mapping and municipal stakeholder interviews to create action playbooks.',
     illustrativeOutcome: 'Delivered 6 Municipal Climate Adaptation Playbooks reviewed by town planners in Jinja, Stellenbosch, and Innsbruck, identifying 18 high-risk urban drainage retention zones.',

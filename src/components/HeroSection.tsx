@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2, Sparkles, Layers, Award, Users, Star } from 'lucide-react';
+import heroImage from '../assets/images/hero_collaboration_lab_1792567152591.jpg';
 
 interface HeroSectionProps {
   onExploreProjects: () => void;
@@ -96,7 +97,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Main Visual Image Card */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 bg-white">
                 <img
-                  src="/src/assets/images/hero_collaboration_lab_1792567152591.jpg"
+                  src={heroImage}
                   alt="Transformation Africa students collaborating in open innovation laboratory"
                   className="w-full h-[400px] sm:h-[460px] object-cover"
                   loading="eager"

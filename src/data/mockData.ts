@@ -1,4 +1,11 @@
 import { Project, Opportunity, StudentAssociate, UniversityPartner } from '../types';
+import agritechImage from '../assets/images/agritech_smart_sensor_1792567153759.jpg';
+import droneImage from '../assets/images/drone_health_logistics_1792567154496.jpg';
+import circularEnergyImage from '../assets/images/circular_clean_energy_1792567155140.jpg';
+import digitalKioskImage from '../assets/images/digital_community_kiosk_1792569747527.jpg';
+import cleanWaterImage from '../assets/images/clean_water_solar_1792569761798.jpg';
+import foodHarvestImage from '../assets/images/food_value_harvest_1792569777069.jpg';
+import heroImage from '../assets/images/hero_collaboration_lab_1792567152591.jpg';
 
 export const UNIVERSITY_PARTNERS: UniversityPartner[] = [
   {
@@ -92,7 +99,7 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Completed',
     year: 2025,
     featured: true,
-    image: '/src/assets/images/agritech_smart_sensor_1792567153759.jpg',
+    image: agritechImage,
     universities: ['Stellenbosch University', 'MCI The Entrepreneurial School'],
     partnerOrgs: ['AgriWest Cape', 'Austrian Development Agency (ADA)'],
     countries: ['South Africa', 'Austria'],
@@ -145,7 +152,7 @@ export const PROJECTS_DATA: Project[] = [
     status: 'In Progress',
     year: 2026,
     featured: true,
-    image: '/src/assets/images/drone_health_logistics_1792567154496.jpg',
+    image: droneImage,
     universities: ['Makerere University', 'Technical University of Munich'],
     partnerOrgs: ['Uganda Ministry of Health', 'Jinja Regional Referral Hospital', 'Munich AeroTech'],
     countries: ['Uganda', 'Germany'],
@@ -196,7 +203,7 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Completed',
     year: 2025,
     featured: true,
-    image: '/src/assets/images/circular_clean_energy_1792567155140.jpg',
+    image: circularEnergyImage,
     universities: ['Makerere University', 'MCI The Entrepreneurial School'],
     partnerOrgs: ['Kampala Clean City Initiative', 'Tyrolean Biomass Institute'],
     countries: ['Uganda', 'Austria'],
@@ -240,7 +247,7 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Completed',
     year: 2026,
     featured: true,
-    image: '/src/assets/images/digital_community_kiosk_1792569747527.jpg',
+    image: digitalKioskImage,
     universities: ['Makerere University', 'Technical University of Munich', 'MCI The Entrepreneurial School'],
     partnerOrgs: ['GIZ Uganda', 'Kampala Urban Living Lab', 'Uganda Communications Commission'],
     countries: ['Uganda', 'Germany'],
@@ -292,7 +299,7 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Completed',
     year: 2025,
     featured: true,
-    image: '/src/assets/images/clean_water_solar_1792569761798.jpg',
+    image: cleanWaterImage,
     universities: ['Makerere University', 'MCI The Entrepreneurial School', 'Strathmore University'],
     partnerOrgs: ['WaterAid East Africa', 'Tyrolean Water Institute', 'Moroto District Council'],
     countries: ['Uganda', 'Austria', 'Kenya'],
@@ -336,7 +343,7 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Completed',
     year: 2025,
     featured: true,
-    image: '/src/assets/images/food_value_harvest_1792569777069.jpg',
+    image: foodHarvestImage,
     universities: ['Makerere University', 'Vienna University of Economics & Business (WU Vienna)', 'University of Cape Town'],
     partnerOrgs: ['Bugisu Organic Coffee Cooperative', 'Fairtrade Africa', 'Austrian Development Agency'],
     countries: ['Uganda', 'Austria', 'South Africa'],
@@ -388,7 +395,7 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Completed',
     year: 2024,
     featured: false,
-    image: '/src/assets/images/hero_collaboration_lab_1792567152591.jpg',
+    image: heroImage,
     universities: ['Stellenbosch University', 'University of Nairobi', 'MCI The Entrepreneurial School'],
     partnerOrgs: ['Mobility Africa Venture', 'Austrian Clean Energy Fund'],
     countries: ['South Africa', 'Kenya', 'Austria'],
@@ -431,7 +438,7 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Completed',
     year: 2024,
     featured: false,
-    image: '/src/assets/images/agritech_smart_sensor_1792567153759.jpg',
+    image: agritechImage,
     universities: ['Stellenbosch University', 'Technical University of Munich'],
     partnerOrgs: ['AgriRisk Global', 'Cape Smallholder Union'],
     countries: ['South Africa', 'Germany'],
@@ -473,7 +480,7 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Completed',
     year: 2025,
     featured: false,
-    image: '/src/assets/images/hero_collaboration_lab_1792567152591.jpg',
+    image: heroImage,
     universities: ['Stellenbosch University', 'Technical University of Munich'],
     partnerOrgs: ['Circular South Africa', 'Cape Town MakerHub', 'Western Cape Department of Education'],
     countries: ['South Africa', 'Germany'],
@@ -517,7 +524,7 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Completed',
     year: 2025,
     featured: false,
-    image: '/src/assets/images/digital_community_kiosk_1792569747527.jpg',
+    image: digitalKioskImage,
     universities: ['Makerere University', 'Stellenbosch University', 'MCI The Entrepreneurial School'],
     partnerOrgs: ['African Climate Foundation', 'Austrian Ministry of Climate Action (BMK)'],
     countries: ['Uganda', 'South Africa', 'Austria'],
