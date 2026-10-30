@@ -159,7 +159,7 @@ export const ReplitNavbar: React.FC<ReplitNavbarProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-[#F8F6F0] border-b border-[#E2EEF5] transition-all">
+    <header className="sticky top-0 z-40 bg-[#F8F6F0]/95 backdrop-blur-md border-b border-[#E2EEF5] transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between" ref={navContainerRef}>
         
         {/* Brand Logo with authentic globe emblem */}

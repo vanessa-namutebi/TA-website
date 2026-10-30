@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ArrowUpRight, Users, Layers, ExternalLink } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Target, Compass, ShieldCheck, Users, Layers, ExternalLink } from 'lucide-react';
 import { REPLIT_PROJECTS, ReplitProject } from '../data/replitData';
 
 interface ReplitHomeBlocksProps {
@@ -60,7 +60,7 @@ export const ReplitSequence: React.FC = () => {
             <div className="text-[11px] font-bold text-[#159FE3] tracking-[0.2em] uppercase mb-3 font-mono">
               How change takes shape
             </div>
-            <h2 className="text-3xl sm:text-[2.25rem] lg:text-[2.75rem] font-extrabold text-[#102B4E] tracking-tight leading-tight max-w-[700px]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#102B4E] tracking-tight leading-tight">
               A simple sequence.<br />A world of possibility.
             </h2>
           </div>
@@ -177,7 +177,7 @@ export const ReplitHomeProjectsPreview: React.FC<ReplitHomeBlocksProps> = ({
         </div>
 
         {/* 4 Featured Real Project Cards */}
-        <div className="project-editorial-grid grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {featured.map((project) => (
             <div
               key={project.id}
@@ -185,7 +185,7 @@ export const ReplitHomeProjectsPreview: React.FC<ReplitHomeBlocksProps> = ({
               className="bg-white rounded-3xl overflow-hidden border border-[#D0E7F5] shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-pointer group"
             >
               {project.image && (
-                <div className="project-image-editorial w-full overflow-hidden bg-slate-100 relative">
+                <div className="h-48 w-full overflow-hidden bg-slate-100 relative">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -311,6 +311,9 @@ export const ReplitPillarsSection: React.FC<{
           {/* Card 1: Purpose */}
           <div className="bg-[#F8F6F0] rounded-3xl p-8 border border-[#D0E7F5] flex flex-col justify-between hover:shadow-md transition-shadow group">
             <div>
+              <div className="w-12 h-12 rounded-2xl bg-[#EAF6FC] text-[#159FE3] flex items-center justify-center mb-6">
+                <Target className="w-6 h-6" />
+              </div>
               <div className="text-[10px] font-mono font-bold text-[#159FE3] uppercase tracking-wider mb-2">
                 Pillar 01 · Purpose
               </div>
@@ -333,6 +336,9 @@ export const ReplitPillarsSection: React.FC<{
           {/* Card 2: Mission */}
           <div className="bg-[#EAF6FC] rounded-3xl p-8 border border-[#D0E7F5] flex flex-col justify-between hover:shadow-md transition-shadow group">
             <div>
+              <div className="w-12 h-12 rounded-2xl bg-white text-[#102B4E] flex items-center justify-center mb-6 shadow-2xs">
+                <Compass className="w-6 h-6 text-[#159FE3]" />
+              </div>
               <div className="text-[10px] font-mono font-bold text-[#159FE3] uppercase tracking-wider mb-2">
                 Pillar 02 · Mission
               </div>
@@ -355,6 +361,9 @@ export const ReplitPillarsSection: React.FC<{
           {/* Card 3: Position */}
           <div className="bg-[#102B4E] rounded-3xl p-8 text-white flex flex-col justify-between shadow-sm group">
             <div>
+              <div className="w-12 h-12 rounded-2xl bg-[#159FE3] text-white flex items-center justify-center mb-6">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
               <div className="text-[10px] font-mono font-bold text-[#FFC94A] uppercase tracking-wider mb-2">
                 Pillar 03 · Position
               </div>

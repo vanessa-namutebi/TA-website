@@ -238,7 +238,7 @@ export default function App() {
   const pendingProposalsCount = proposals.filter((p) => p.status === 'Pending Review').length;
 
   return (
-    <div className="editorial-ui min-h-screen flex flex-col bg-[#F8F6F0] text-[#102B4E]">
+    <div className="min-h-screen flex flex-col bg-[#F8F6F0] text-[#102B4E]">
       {/* Top Navigation with requested 5 dropdowns */}
       <ReplitNavbar
         currentTab={currentTab}
