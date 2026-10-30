@@ -262,9 +262,6 @@ export const ReplitProjects: React.FC<ReplitProjectsProps> = ({
               {/* Type 1: COIL */}
               <div className="bg-white rounded-3xl p-7 border border-[#D0E7F5] shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#EAF6FC] flex items-center justify-center text-[#159FE3] mb-5">
-                    <Globe2 className="w-6 h-6" />
-                  </div>
                   <div className="text-[10px] font-mono font-bold text-[#159FE3] uppercase tracking-wider mb-1">
                     Virtual Exchange · 8-14 Weeks
                   </div>
@@ -301,9 +298,6 @@ export const ReplitProjects: React.FC<ReplitProjectsProps> = ({
               {/* Type 2: Study Tours & Field Research */}
               <div className="bg-white rounded-3xl p-7 border border-[#D0E7F5] shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#EAF6FC] flex items-center justify-center text-[#159FE3] mb-5">
-                    <Calendar className="w-6 h-6" />
-                  </div>
                   <div className="text-[10px] font-mono font-bold text-[#159FE3] uppercase tracking-wider mb-1">
                     On-Site Immersive · 1-3 Weeks
                   </div>
@@ -340,9 +334,6 @@ export const ReplitProjects: React.FC<ReplitProjectsProps> = ({
               {/* Type 3: Bachelor & Master Theses */}
               <div className="bg-white rounded-3xl p-7 border border-[#D0E7F5] shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#EAF6FC] flex items-center justify-center text-[#159FE3] mb-5">
-                    <GraduationCap className="w-6 h-6" />
-                  </div>
                   <div className="text-[10px] font-mono font-bold text-[#159FE3] uppercase tracking-wider mb-1">
                     Academic Degree Project · 4-6 Months
                   </div>
@@ -379,9 +370,6 @@ export const ReplitProjects: React.FC<ReplitProjectsProps> = ({
               {/* Type 4: Applied Industry Internships */}
               <div className="bg-white rounded-3xl p-7 border border-[#D0E7F5] shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#EAF6FC] flex items-center justify-center text-[#159FE3] mb-5">
-                    <Building2 className="w-6 h-6" />
-                  </div>
                   <div className="text-[10px] font-mono font-bold text-[#159FE3] uppercase tracking-wider mb-1">
                     Professional Placement · 3-6 Months
                   </div>
@@ -418,9 +406,6 @@ export const ReplitProjects: React.FC<ReplitProjectsProps> = ({
               {/* Type 5: Hackathons & Rapid Prototyping Sprints */}
               <div className="bg-white rounded-3xl p-7 border border-[#D0E7F5] shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#EAF6FC] flex items-center justify-center text-[#159FE3] mb-5">
-                    <Sparkles className="w-6 h-6" />
-                  </div>
                   <div className="text-[10px] font-mono font-bold text-[#159FE3] uppercase tracking-wider mb-1">
                     Sprint Event · 48 Hours to 1 Week
                   </div>
@@ -457,9 +442,6 @@ export const ReplitProjects: React.FC<ReplitProjectsProps> = ({
               {/* Type 6: Custom Enterprise Sprints */}
               <div className="bg-[#102B4E] rounded-3xl p-7 text-white shadow-md flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#159FE3] flex items-center justify-center text-white mb-5">
-                    <Building2 className="w-6 h-6" />
-                  </div>
                   <div className="text-[10px] font-mono font-bold text-[#FFC94A] uppercase tracking-wider mb-1">
                     Enterprise Co-Creation
                   </div>

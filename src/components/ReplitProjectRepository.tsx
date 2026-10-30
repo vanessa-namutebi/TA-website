@@ -187,7 +187,7 @@ export const ReplitProjectRepository: React.FC<ReplitProjectRepositoryProps> = (
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="project-editorial-grid grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
@@ -196,7 +196,7 @@ export const ReplitProjectRepository: React.FC<ReplitProjectRepositoryProps> = (
             >
               {/* Optional Photo Header if project has image */}
               {project.image && (
-                <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100">
+                <div className="project-image-editorial relative w-full overflow-hidden bg-slate-100">
                   <img
                     src={project.image}
                     alt={project.title}
