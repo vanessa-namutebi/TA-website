@@ -226,6 +226,7 @@ export const ReplitPurpose: React.FC<ReplitPurposeProps> = ({
           <div className="space-y-10 animate-in fade-in duration-200">
             {/* Header intro */}
             <div className="bg-[#102B4E] text-white rounded-3xl p-8 sm:p-10 shadow-md relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-80 h-80 bg-[#159FE3]/15 rounded-full blur-3xl pointer-events-none" />
               <div className="relative z-10 max-w-3xl">
                 <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#FFC94A] font-bold mb-2">
                   Systemic Architecture
